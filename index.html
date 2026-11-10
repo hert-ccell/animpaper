@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Discover anime-inspired mobile and desktop wallpapers on AnimPaper. Browse aesthetic, dark, JJK-inspired and more wallpaper collections.">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="AnimPaper">
+  <meta property="og:title" content="AnimPaper — Anime Wallpapers for Every Screen">
+  <meta property="og:description" content="Find your next favourite anime-inspired wallpaper for phone and desktop.">
+  <meta property="og:image" content="assets/wallpapers/midnight-desktop.svg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="AnimPaper — Anime Wallpapers">
+  <meta name="twitter:description" content="Anime-inspired wallpapers for mobile and desktop.">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"WebSite",
+    "name":"AnimPaper",
+    "description":"Anime-inspired wallpapers for mobile and desktop.",
+    "potentialAction":{
+      "@type":"SearchAction",
+      "target":"https://YOUR-DOMAIN.pages.dev/?q={search_term_string}",
+      "query-input":"required name=search_term_string"
+    }
+  }
+  </script>
+  <meta name="theme-color" content="#0b0912">
+  <title>AnimPaper — Anime Wallpapers for Every Screen</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="AnimPaper home"><span class="brand-mark">A</span><span>Anim<span class="accent">Paper</span></span></a>
+    <nav class="main-nav" aria-label="Main navigation">
+      <a class="active" href="#discover">Discover</a>
+      <a href="#categories">Categories</a>
+      <a href="#about">About</a>
+    </nav>
+    <a class="header-cta" href="#discover">Explore wallpapers <span>↗</span></a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">☰</button>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="eyebrow-dot"></span> YOUR SCREEN, YOUR UNIVERSE</div>
+        <h1>Find your next<br><span class="gradient-text">favorite wallpaper.</span></h1>
+        <p>Carefully curated anime-inspired art for your desktop, phone and everything in between.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#discover">Explore collection <span>→</span></a>
+          <a class="button button-quiet" href="#categories">Browse categories</a>
+        </div>
+        <div class="hero-proof"><span class="proof-avatars"><i>✦</i><i>月</i><i>影</i></span><span>Fresh visuals. Every screen.</span></div>
+      </div>
+      <div class="hero-art" aria-label="Decorative original anime-inspired artwork">
+        <div class="hero-glow"></div>
+        <div class="hero-orbit orbit-one"></div><div class="hero-orbit orbit-two"></div>
+        <div class="hero-moon"></div>
+        <div class="hero-silhouette"><div class="silhouette-head"></div><div class="silhouette-body"></div><div class="silhouette-coat"></div></div>
+        <div class="hero-art-label"><span>FEATURED ART</span><b>Midnight / 001</b></div>
+        <div class="hero-side-note">ANIME INSPIRED · DIGITAL ART</div>
+      </div>
+    </section>
+
+    <section class="search-section" id="discover">
+      <div class="section-heading">
+        <div><div class="eyebrow">THE COLLECTION</div><h2>Explore wallpapers</h2></div>
+        <span class="collection-count" id="resultCount">0 wallpapers</span>
+      </div>
+      <div class="toolbar">
+        <label class="search-box"><span>⌕</span><input id="searchInput" type="search" placeholder="Search anime, character, mood..." autocomplete="off"><kbd>⌘ K</kbd></label>
+        <div class="filter-row">
+          <select id="deviceFilter" aria-label="Filter by device">
+            <option value="all">All screens</option><option value="desktop">Desktop</option><option value="mobile">Mobile</option>
+          </select>
+          <select id="sortFilter" aria-label="Sort wallpapers">
+            <option value="featured">Featured</option><option value="newest">Newest</option><option value="az">A–Z</option>
+          </select>
+        </div>
+      </div>
+      <div class="chips" id="categoryChips" aria-label="Wallpaper categories">
+        <button class="chip active" data-category="all">All wallpapers</button>
+        <button class="chip" data-category="JJK">JJK</button>
+        <button class="chip" data-category="Naruto">Naruto</button>
+        <button class="chip" data-category="One Piece">One Piece</button>
+        <button class="chip" data-category="Demon Slayer">Demon Slayer</button>
+        <button class="chip" data-category="Aesthetic">Aesthetic</button>
+        <button class="chip" data-category="Original">Original art</button>
+      </div>
+      <div class="ad-slot" aria-label="Advertisement placement"><span>ADVERTISEMENT</span><small>Your ad placement can appear here after approval by an ad network.</small></div>
+      <div class="wallpaper-grid" id="wallpaperGrid" aria-live="polite"></div>
+      <div class="empty-state" id="emptyState" hidden><div class="empty-icon">⌕</div><h3>No wallpapers found</h3><p>Try a different search or category.</p><button class="button button-quiet" id="clearFilters">Clear filters</button></div>
+    </section>
+
+    <section class="category-section" id="categories">
+      <div class="section-heading"><div><div class="eyebrow">FIND YOUR VIBE</div><h2>Browse by mood</h2></div></div>
+      <div class="category-cards">
+        <button class="category-card category-purple" data-jump="JJK"><span>01 / DARK & INTENSE</span><b>JJK Universe</b><i>↗</i></button>
+        <button class="category-card category-red" data-jump="Naruto"><span>02 / LEGENDARY</span><b>Ninja Legends</b><i>↗</i></button>
+        <button class="category-card category-blue" data-jump="Aesthetic"><span>03 / CALM & DREAMY</span><b>After Hours</b><i>↗</i></button>
+      </div>
+    </section>
+
+    <section class="newsletter-strip" id="about">
+      <div><div class="eyebrow">ABOUT ANIMPAPER</div><h2>A better background<br>for every day.</h2><p>AnimPaper is a wallpaper discovery project. We aim to showcase original creations and artwork shared with permission by their creators.</p></div>
+      <div class="newsletter-symbol">A<span>✦</span></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <a class="brand" href="index.html"><span class="brand-mark">A</span><span>Anim<span class="accent">Paper</span></span></a>
+    <p>Made for anime fans. Respect creators.</p>
+    <div class="footer-links"><a href="about.html">About</a><a href="privacy.html">Privacy</a><a href="copyright.html">Copyright</a><a href="contact.html">Contact</a></div>
+    <small>© <span id="year"></span> AnimPaper. All rights reserved.</small>
+  </footer>
+
+  <div class="modal" id="wallpaperModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-backdrop" data-close></div>
+    <div class="modal-panel">
+      <button class="modal-close" data-close aria-label="Close preview">×</button>
+      <div class="modal-image-wrap"><img id="modalImage" alt=""></div>
+      <div class="modal-info"><div class="eyebrow" id="modalCategory"></div><h2 id="modalTitle"></h2><p id="modalDescription"></p><div class="modal-downloads" id="modalDownloads"></div><small id="modalCredit"></small></div>
+    </div>
+  </div>
+
+  <div class="cookie-notice" id="cookieNotice" hidden><p>We use essential browser storage to remember this choice. See our <a href="privacy.html">privacy policy</a>.</p><button class="button button-primary" id="cookieAccept">Got it</button></div>
+  <script src="assets/js/wallpapers.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
